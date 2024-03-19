@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let arr = [1,2,3,4,5,5,6]
+    let set = new Set(arr)
+
+    let obj1 = {"name is : " : "Shreyas"}
+
+    set.add(7)
+    set.add(obj1)
+    set.delete(obj1)
+    set.clear()
+    console.log(set)
+    console.log(set.size)
+    console.log(set.has(2))
+
+    set.forEach((el)=>{
+        console.log(el)
+    })
+
+</script>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DEMO </title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function linked(val){
+        this.node = val
+        this.next = null
+    }
+    let singly1 = new linked(1)
+    let singly2 = new linked(2)
+    let singly3 = new linked(3)
+    let singly4 = new linked(4)
+    let singly5 = new linked(5)
+
+    singly1.next = singly2
+    singly2.next = singly3
+    singly3.next = singly4
+    singly4.next = singly5
+
+    let singly = singly1
+    let n = 2
+    let length = 5
+    
+    function last(lists,remove,totalnode){
+        let n = remove
+        let cout1 = totalnode
+        let step = lists
+        while(step != null)
+        {
+            if(cout1 === n)
+            {
+                step = step.next
+            }
+            else
+            {
+                console.log(step.node)
+                step = step.next
+            }
+            cout1--
+        }
+    }
+
+    last(singly,n,length)
+
+</script>

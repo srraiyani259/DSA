@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let str="ureyfafar"
+
+    function ispaladrome(str)
+    {
+         let s=0;
+         let e=str.length-1
+    let isP=true;
+         
+         if(str[s]===str[e])
+         {
+           s++;
+           e--
+           isP=true
+
+         }
+
+         else
+         {
+            console.log("Not a palindrome")
+            isP=false
+        
+            
+         }
+         return isP
+
+    }
+    console.log(ispaladrome(str))
+</script>

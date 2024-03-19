@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let num = [10, 30 , 60 , 89 , 99 , 105 , 120]
+    let target = 99
+
+    function Bs(num , target , s, e)
+    {
+        if(s > e)
+        {
+            return -1
+        }
+
+        let  mid = Math.floor((s + e)/2)
+        if(num[mid] === target)
+        {
+            return mid
+        }
+
+        if(num[mid] < target)
+        {
+            return Bs(num , target , mid + 1 , e)
+        }
+        else
+        {
+            return Bs(num , target , s , mid - 1)
+        }
+    }
+
+    let index = Bs(num , target , 0 , num.length - 1)
+
+    if(index != -1)
+    {
+        console.log("Found Target At " +index)
+    }
+    else
+    {
+        console.log("Sorry ! Not Found")
+    }
+
+</script>

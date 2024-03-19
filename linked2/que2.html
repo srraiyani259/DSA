@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+function node(value){
+        this.value = value
+        this.next = null
+    }
+
+    const node1 = new node(11)
+    const node2 = new node(22)
+    const node3 = new node(33)
+    const node4 = new node(44)
+    const node5 = new node(55)
+    const node6 = new node(66)
+
+    node1.next = node2
+    node2.next = node3
+    node3.next = node4
+    node4.next = node6
+    node6.next = node5
+
+    let curr = node1
+    while(curr != null)
+    {
+        console.log(curr.value)
+        curr = curr.next
+    }
+
+</script>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function Node(value){
+this.value = value
+this.next = null
+    }
+
+   const Node1=new Node(100)
+   const Node2=new Node(150)
+   const Node3=new Node(200)
+   const Node4=new Node(250)
+   const Node5=new Node(300)
+   const Node6=new Node(350)
+
+   
+
+   Node1.next=Node2
+   Node2.next=Node3
+   Node3.next=Node4
+   Node4.next=Node6
+   Node6.next=Node5
+   
+   let current = Node1
+   while(current != null){
+    console.log(current.value)
+    current=current.next
+
+   }
+</script> -->

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function node(value){
+        this.value = value
+        this.next = null
+    }
+
+    const node1 = new node(11)
+    const node2 = new node(22)
+    const node3 = new node(33)
+    const node4 = new node(44)
+    const node5 = new node(55)
+    const node6 = new node(66)
+
+    node1.next = node2
+    node2.next = node3
+    node3.next = node5
+    node5.next = node6
+    node6.next = node4
+
+    let curr = node1
+    while(curr != null)
+    {
+        console.log(curr.value)
+        curr = curr.next
+    }
+
+</script>

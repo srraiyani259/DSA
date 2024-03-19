@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+ let nums = [2,7,11,15]
+ let target=9;
+
+ function ispaladrome(nums,target)
+ {   
+    let arr=[]
+    let ans=0;
+       for(let i=0;i<nums.length;i++)
+       {
+      
+          if(ans===target)
+          {
+           break
+          }
+          else
+          {
+            ans+=nums[i]
+            arr.push(i)
+            
+          }
+
+       }
+       return arr
+    
+ }
+ console.log(ispaladrome(nums,target))
+
+</script>

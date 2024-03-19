@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>que1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+function Node(value){
+        this.value = value
+        this.nextnode = null
+    }
+
+    const Node1 = new Node(1)
+    const Node2 = new Node(3)
+    const Node3 = new Node(5)
+
+function linked(value){
+        this.value = value
+        this.nextnode = null
+    }
+
+    const linked1 = new linked(2)
+    const linked2 = new linked(4)
+    const linked3 = new linked(6)
+
+    Node1.next = linked1
+    linked1.next = Node2
+    Node2.next = linked2
+    linked2.next = Node3
+    Node3.next = linked3
+
+    let current = Node1
+    while(current != null){
+        console.log(current.value)
+        current = current.next
+    }
+
+</script>

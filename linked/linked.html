@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function singly(value){
+        this.value=value
+        this.next=null
+    }
+
+    const singly1 = new singly(33)
+    const singly2 = new singly(44)
+    const singly3 = new singly(55)
+    const singly4 = new singly(66)
+    const singly5 = new singly(77)
+    const singly6 = new singly(88)
+
+    singly1.next = singly2
+    singly2.next = singly3
+    singly3.next = singly4
+    singly4.next = singly5
+    singly5.next = singly6
+
+    let cur = singly1
+    while(cur != null)
+    {
+        console.log(cur.value)
+        cur = cur.next
+    }
+
+</script>

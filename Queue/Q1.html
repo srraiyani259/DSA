@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    class Queue{
+
+        constructor(){
+            this.queue = []
+        }
+
+        enqueue(element){
+            this.queue.push(element)
+        }
+
+        size(){
+            return this.queue.length
+        }
+
+        isEmpty(){
+            return this.queue.length === 0
+        }
+
+        desqueue(){
+            
+            if(this.isEmpty()){
+                return "Queue is Empty"
+            }
+            else{
+                return this.queue.shift()
+            }
+        }
+
+        front(){
+            
+            if(this.isEmpty()){
+                return "Queue is Empty"
+            }
+            else{
+                return this.queue[0]
+            }
+        }
+    }
+
+    let queue = new Queue
+    
+    queue.enqueue(11)
+    queue.enqueue(22)
+    queue.enqueue(33)
+    queue.enqueue(44)
+    queue.enqueue(55)
+
+    console.log(queue)
+    console.log(queue.front())
+
+</script>
