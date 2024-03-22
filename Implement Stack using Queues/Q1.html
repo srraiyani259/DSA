@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Stack{
+        constructor(){
+            this.q1 = []
+            this.q2 = []
+        }
+
+        push(s){
+            this.q2.push(s)
+            while(this.q1.length != 0){
+                this.q2.push(this.q1[0])
+                this.q1.shift()
+
+            }
+            this.q = this.q1
+            this.q1 = this.q2
+            this.q2 =this.q
+        }
+
+        pop(){
+            if(this.q1.length === 0){
+                return -1
+            }
+            return this.q1.shift()
+        }
+
+        top() {
+        if (this.q1.length === 0) {
+            return null
+        }
+
+        return this.q1[0]
+    }
+    
+        empty(){
+            return this.q1.length === 0
+        }
+    }
+    let r = new Stack
+    r.push(4)
+    r.push(3)
+    r.push(2)
+    console.log(r.top()); 
+console.log(r.pop()); 
+console.log(r.empty());
+    
+</script>
