@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let nums = [2,7,11,15];
+    let target = 18;
+
+    function Sum(nums , target)
+    {
+        const arr = [];
+    
+        for (let i=0;i<nums.length;i++)
+        {
+            let val = target-nums[i];
+            
+            if(val in arr)
+            {
+                return [arr[val], i];
+            }
+            arr[nums[i]] = i;
+        }
+        return null
+    }
+    console.log(Sum(nums , target))
+
+</script>
